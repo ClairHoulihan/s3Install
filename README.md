@@ -26,3 +26,6 @@ These points are made with Windows running WSL Ubuntu in mind, if you are using 
 
 10. Go ahead and test the connection at the end, if it works, you should be able to continue using s3cmd without issue, if there are problems that occur during any step, let me know, and I will attempt to solve it (and perhaps add it to this README so that others can see it if they have the same problem).
   
+## Trouble Shooting
+
+ - s3cmd not found: If you are getting this, it could be that the permissions are not set on the file. run `ls -l` to check s3cmd to see if it has execute privileges for the owner, if it does not, run `chmod 755 ./s3cmd` which will give the owner read, write and execute privileges, and read and execute privileges for everyone else.
